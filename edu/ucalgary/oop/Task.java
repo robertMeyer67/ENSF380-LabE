@@ -1,3 +1,8 @@
+/**
+ @version 1.3
+ @since 1.0
+ */
+
 package edu.ucalgary.oop;
 
 import java.util.Objects;
@@ -13,7 +18,13 @@ public class Task {
         this.id = id;
         this.title = title;
         this.isCompleted = false;
-    }    
+    }
+
+    public Task(Task other) {
+        this.id = other.id;
+        this.title = other.title;
+        this.isCompleted = other.isCompleted;
+    }
 
     // Getters and Setters
     public String getId() {
@@ -38,11 +49,6 @@ public class Task {
 
     public void setCompleted(boolean completed) {
         isCompleted = completed;
-    }
-
-    // Copy method for deep copying task objects
-    public Task copy() {
-        return new Task(this.id, this.title);
     }
 
     @Override
