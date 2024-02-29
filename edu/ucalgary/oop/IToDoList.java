@@ -7,8 +7,6 @@ interface IToDoList{
 	void completeTask(String id);
 	void deleteTask(String id);
 	void editTask(String id, String newTitle, boolean isCompleted);
-	void undoAddTask();
-	void undoDeleteTask();
-	void multipleUndos();
+	void undo();
 	List<Task> listTasks();
 }
