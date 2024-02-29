@@ -9,11 +9,11 @@ public class Task {
     private boolean isCompleted;
 
     // Constructor
-    public Task(String id, String title, boolean isCompleted) {
+    public Task(String id, String title) {
         this.id = id;
         this.title = title;
-        this.isCompleted = isCompleted;
-    }
+        this.isCompleted = false;
+    }    
 
     // Getters and Setters
     public String getId() {
@@ -42,7 +42,7 @@ public class Task {
 
     // Copy method for deep copying task objects
     public Task copy() {
-        return new Task(this.id, this.title, this.isCompleted);
+        return new Task(this.id, this.title);
     }
 
     @Override
